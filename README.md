@@ -1,4 +1,4 @@
-# 🌐 Vipul Madavi — Cloud Security Portfolio
+# 🌐 Vipul Madavi - Portfolio
 
 Welcome to my personal portfolio website!
 
