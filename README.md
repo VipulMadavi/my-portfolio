@@ -1,83 +1,69 @@
-# ☁️ Cloud Security Portfolio | Vipul Madavi
+# 🌐 Vipul Madavi — Cloud Security Portfolio
 
-> A dual-mode portfolio website showcasing my journey in Cloud Security and DevSecOps.
-> Featuring a "Public" GUI for recruiters and a hidden "Cloud Shell" for developers.
+Welcome to my personal portfolio website!
 
-![Portfolio Preview](./preview.png)
+This website showcases my professional journey, technical skills, certifications, and projects in the field of **Cloud Security**, **DevSecOps**, **Network Engineering**, and **Python Automation**. It features a unique dual-mode interface: a public graphical view and a hidden developer terminal.
 
-## 🚀 Overview
-
-This portfolio is designed to reflect my identity as a **Computer Science Student** specializing in **Cloud Security**. It moves away from the typical "Matrix Hacker" clichés and instead focuses on a clean, engineered "Cloud Architect" aesthetic with a tech-forward edge.
-
-### Key Features
-*   **Dual Interface**:
-    *   **GUI Mode (Default)**: A modern, responsive interface with glassmorphism, glowing tech borders, and smooth animations.
-    *   **Cloud Shell (Hidden)**: A functional CLI environment accessible via a backdoor (`?dev=true`), simulating a cloud terminal.
-*   **Interactive Elements**:
-    *   **Background**: A custom Canvas-based "Network Graph" simulating connected cloud nodes.
-    *   **Typing Animation**: Dynamic hero text cycling through my roles.
-    *   **Animated Skills**: Progress bars that trigger on scroll using Intersection Observer.
-*   **Tech Stack**: Built with **Vanilla JavaScript** and **Vite** for maximum performance and zero bloat.
-
-## 🛠️ Tech Stack
-
-*   **Frontend**: HTML5, CSS3 (Variables + Flexbox/Grid), Vanilla ES6+ JavaScript.
-*   **Build Tool**: Vite.
-*   **Styling**: Custom CSS with a "Cyber-Cloud" theme (Deep Slate Blue & Cyan).
-*   **Animation**: Native CSS Transitions & Canvas API.
-
-## 📦 Installation & Setup
-
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/VipulMadavi/cloud-portfolio.git
-    cd cloud-portfolio
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Run Development Server**
-    ```bash
-    npm run dev
-    ```
-
-4.  **Build for Production**
-    ```bash
-    npm run build
-    ```
-
-## 🎮 How to Use
-
-### GUI Mode
-Simply navigate to the home page. Use the navigation bar to jump between:
-*   **Home**: Introduction and animated typing text.
-*   **Work**: Showcase of projects like AEStego and Cloud Monitor.
-*   **Contact**: Internship inquiry options.
-
-### Terminal Mode (Backdoor)
-To access the hidden developer console, append `?dev=true` to your URL:
-`http://localhost:5173/?dev=true`
-
-**Available Commands:**
-*   `help`: List all commands.
-*   `sys_info`: Display "System" (User) details.
-*   `projects`: JSON output of my projects.
-*   `contact`: Display contact info.
-*   `gui`: Return to the graphical interface.
-
-## 🎨 Theme Details
-The design follows a **"Cyber-Cloud"** aesthetic:
-*   **Colors**: Deep Slate Blue (`#0f172a`), Cyan (`#38bdf8`), and Slate Grey.
-*   **Typography**: *JetBrains Mono* for a dev-friendly feel, paired with *Inter* for readability.
-
-## 👤 Author
-
-**Vipul Madavi**
-*   Final Year Computer Science Student
-*   Cloud Security Enthusiast
+> 🔒 Cloud Security Enthusiast | SIH 2025 Finalist | Third Year CS Student
 
 ---
-*Built with code, secured by design.*
+
+## 🚀 Live Website
+
+Visit the portfolio: [https://vipulmadavi.github.io/terminal-portfolio](https://vipulmadavi.github.io/terminal-portfolio)
+_(Note: URL may vary based on repository name)_
+
+---
+
+## 🛠️ Built With
+
+- **HTML5** (Semantic Structure)
+- **CSS3** (Custom "Cyber-Cloud" Theme & Animations)
+- **Vanilla JavaScript** (Logic for dual-modes)
+- **Vite** (Build Tool)
+- **Canvas API** (Interactive Network Background)
+- **Responsive Design** for all devices
+
+---
+
+## 📂 Structure
+
+```
+📁 root
+    ├── index.html          # Entry point
+    ├── src/
+    │   ├── gui.css         # "Cloud Horizon" Theme Styles
+    │   ├── main.js         # Mode Manager
+    │   ├── gui/            # Graphical Interface Components
+    │   └── terminal/       # Hidden Command Line Interface
+    └── README.md           # You are here
+```
+
+---
+
+## 🧠 Sections Included
+
+- 👨‍💻 **Hero Section**: Introduces my role with dynamic typing effects.
+- ⚙️ **Skills**: Visual progress bars for Cloud, Network, and Security skills.
+- 📁 **Projects**: Showcase of work like **AEStego** and **SOC Dashboard**.
+- 📟 **Hidden Terminal**: A "Cloud Shell" backdrop accessible via `?dev=true` or the _Hack_ command.
+- 📜 **Resume**: Direct access to my professional resume.
+- 📞 **Contact**: Integrated connection details.
+
+---
+
+## 🖥️ Hosting via GitHub Pages
+
+This site is designed to be deployed using [GitHub Pages](https://pages.github.com/), providing a fast and secure way to host the static portfolio directly from the repository.
+
+---
+
+## 📧 Connect With Me
+
+- 💼 [LinkedIn](https://linkedin.com/in/vipul-madavi1509)
+- 🐙 [GitHub](https://github.com/VipulMadavi)
+- 📧 [Email](mailto:vipulmadavi1509@gmail.com)
+
+---
+
+> Designed & Developed with 💙 by **Vipul Madavi**
