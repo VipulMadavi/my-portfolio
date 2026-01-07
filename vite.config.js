@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/', // explicit base path for user pages (root)
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-  }
+    base: './', // relative base path to ensure flexibility
+    build: {
+        outDir: 'dist',
+        assetsDir: 'assets',
+    }
 });
