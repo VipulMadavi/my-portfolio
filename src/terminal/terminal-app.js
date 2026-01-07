@@ -87,12 +87,17 @@ function processCommand(cmd, container) {
         <span class="cmd-name">contact</span>    - Show contact details<br>
         <span class="cmd-name">clear</span>      - Clear terminal screen<br>
         <span class="cmd-name">gui</span>        - Return to graphical interface<br>
-        <span class="cmd-name">hack</span>       - ???<br>
+        <span class="cmd-name">hack</span>       - Initiate security protocol<br>
+        <span class="cmd-name">matrix</span>     - Enter the matrix<br>
       `);
       break;
 
     case 'hack':
       runHackSequence(container);
+      break;
+
+    case 'matrix':
+      runMatrixEffect(container);
       break;
 
     case 'sys_info':
@@ -140,4 +145,57 @@ function runHackSequence(container) {
       addToLog(container, `<span class="highlight">[+] ${line}</span>`);
     }, delay);
   });
+}
+
+function runMatrixEffect(container) {
+  // Clear container
+  container.innerHTML = '';
+  container.style.overflow = 'hidden';
+
+  // Create Canvas
+  const canvas = document.createElement('canvas');
+  canvas.width = container.clientWidth;
+  canvas.height = container.clientHeight;
+  canvas.style.position = 'absolute';
+  canvas.style.top = '0';
+  canvas.style.left = '0';
+  container.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  const letters = '010101010010101010101010101';
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+  const drops = Array(Math.floor(columns)).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#0F0';
+    ctx.font = fontSize + 'px monospace';
+
+    for (let i = 0; i < drops.length; i++) {
+      const text = letters.charAt(Math.floor(Math.random() * letters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  // Exit instruction
+  const exitBtn = document.createElement('div');
+  exitBtn.innerHTML = "PRESS REFRESH TO EXIT MATRIX";
+  exitBtn.style.position = 'absolute';
+  exitBtn.style.bottom = '10px';
+  exitBtn.style.right = '10px';
+  exitBtn.style.color = '#fff';
+  exitBtn.style.background = '#000';
+  exitBtn.style.padding = '5px';
+  container.appendChild(exitBtn);
 }

@@ -1,4 +1,4 @@
-# 🌐 Vipul Madavi - Portfolio
+# 🌐 Vipul Madavi — Portfolio
 
 Welcome to my personal portfolio website!
 
@@ -11,7 +11,7 @@ This website showcases my professional journey, technical skills, certifications
 ## 🚀 Live Website
 
 Visit the portfolio: [https://vipulmadavi.github.io/terminal-portfolio](https://vipulmadavi.github.io/terminal-portfolio)
-_(Note: URL may vary based on repository name)_
+*(Note: URL may vary based on repository name)*
 
 ---
 
@@ -46,7 +46,7 @@ _(Note: URL may vary based on repository name)_
 - 👨‍💻 **Hero Section**: Introduces my role with dynamic typing effects.
 - ⚙️ **Skills**: Visual progress bars for Cloud, Network, and Security skills.
 - 📁 **Projects**: Showcase of work like **AEStego** and **SOC Dashboard**.
-- 📟 **Hidden Terminal**: A "Cloud Shell" backdrop accessible via `?dev=true` or the _Hack_ command.
+- 📟 **Hidden Terminal**: A "Cloud Shell" backdrop accessible via `?dev=true` or the *Hack* command.
 - 📜 **Resume**: Direct access to my professional resume.
 - 📞 **Contact**: Integrated connection details.
 

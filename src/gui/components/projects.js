@@ -1,8 +1,8 @@
 const projects = [
   {
     title: "AEStego",
-    desc: "Secure data hiding using AES-128 encryption & steganography.",
-    tags: ["Cryptography", "Python", "Security"]
+    desc: "Combines AES-128 encryption with image steganography to securely embed and extract data.",
+    tags: ["Python", "Cryptography", "Security"]
   },
   {
     title: "Cloud Monitor",

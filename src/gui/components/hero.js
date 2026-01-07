@@ -7,15 +7,16 @@ export function renderHero(element) {
           Vipul Madavi
         </h1>
         <div class="typewriter-text">
-          I am <span id="typing-text"></span><span class="cursor"></span>
+          <span id="typing-text"></span><span class="cursor"></span>
         </div>
         <p class="hero-subtitle">
-          Pre-final Year Computer Science Student.<br>
-          Building resilient cloud infrastructure and securing the digital frontier.
+          Third-year Computer Science Engineering Student.<br>
+          Enthusiastic Learner exploring AI, Cybersecurity, and Cloud Technologies.<br>
+          SIH 2025 Finalist.
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#" class="btn btn-resume">Resume_v1.0</a>
+          <a href="/resume.pdf" target="_blank" class="btn btn-resume">Resume_v1.0</a>
         </div>
       </div>
     </div>
@@ -26,10 +27,10 @@ export function renderHero(element) {
 
 function initTyping() {
   const roles = [
-    "a Computer Science Student.",
-    "a Cloud Sec Enthusiast.",
-    "learning DevSecOps.",
-    "building Secure Systems."
+    "AI, CyberSec & Cloud Tech.",
+    "an Enthusiastic Learner.",
+    "a CSE Student.",
+    "an SIH 2025 Finalist."
   ];
   const el = document.getElementById('typing-text');
   let roleIndex = 0;
