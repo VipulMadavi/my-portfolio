@@ -10,7 +10,7 @@ This website showcases my professional journey, technical skills, certifications
 
 ## 🚀 Live Website
 
-Visit the portfolio: [https://vipulmadavi.github.io/terminal-portfolio](https://vipulmadavi.github.io/terminal-portfolio)
+Visit the portfolio: [https://vipulmadavi.github.io/vipulm1509.github.io](https://vipulmadavi.github.io/vipulm1509.github.io)
 *(Note: URL may vary based on repository name)*
 
 ---
