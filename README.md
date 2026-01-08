@@ -4,14 +4,13 @@ Welcome to my personal portfolio website!
 
 This website showcases my professional journey, technical skills, certifications, and projects in the field of **Cloud Security**, **DevSecOps**, **Network Engineering**, and **Python Automation**. It features a unique dual-mode interface: a public graphical view and a hidden developer terminal.
 
-> 🔒 Cloud Security Enthusiast | SIH 2025 Finalist | Third Year CS Student
+> 🔒 Cloud Security Enthusiast | Third Year CS Student
 
 ---
 
 ## 🚀 Live Website
 
 Visit the portfolio: [https://vipulmadavi.github.io/vipulm1509.github.io](https://vipulmadavi.github.io/vipulm1509.github.io)
-*(Note: URL may vary based on repository name)*
 
 ---
 
