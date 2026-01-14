@@ -1,31 +1,47 @@
 /* GUI Specific Styles - "Cyber-Cloud" Tech Overhaul */
 
-/* Nav */
+/* Nav - Cyber/HUD Style */
 .nav-bar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
-    /* Fixed height to calculate offset */
     z-index: 1000;
-    /* Ensure on top */
     padding: 0 2rem;
-    background: rgba(15, 23, 42, 0.95);
-    /* More opaque to hide content behind */
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--accent-glow);
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+
+    /* Alignment Fix */
     display: flex;
     align-items: center;
+    /* Vertically center content */
+    justify-content: center;
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* Center items inside wrapper */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
+    /* Ensure content fills bar to allow centering */
+}
+
+/* Nav Header (Logo + Toggle wrapper) */
+/* DESKTOP: Only strictly wrap logo, let flex do the rest */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    /* Fix: Was 100%, causing desktop layout to break */
 }
 
 .logo {
@@ -33,26 +49,109 @@
     font-weight: 700;
     color: var(--accent-primary);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    text-shadow: 2px 0 var(--color-red), -2px 0 var(--color-yellow);
+}
+
+/* Menu Toggle Button (Desktop: Hidden) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--accent-primary);
+    color: var(--accent-primary);
+    font-family: var(--font-mono);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.menu-toggle:hover {
+    background: rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 10px var(--accent-glow);
 }
 
 .nav-links {
     display: flex;
+    /* Ensure it is flex on desktop */
     gap: 2rem;
+    /* Revert to standard 2rem gap */
 }
 
+/* Nav Link Animations */
 .nav-links a {
+    position: relative;
     color: var(--text-secondary);
     font-family: var(--font-mono);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+/* Hover: The "Bracket" Effect */
+.nav-links a::before,
+.nav-links a::after {
+    display: inline-block;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    color: var(--accent-primary);
+}
+
+.nav-links a::before {
+    content: '[';
+    margin-right: 5px;
+    transform: translateX(10px);
+}
+
+.nav-links a::after {
+    content: ']';
+    margin-left: 5px;
+    transform: translateX(-10px);
 }
 
 .nav-links a:hover {
     color: var(--accent-primary);
     text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-links a:hover::before,
+.nav-links a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Active/Click State */
+.nav-links a:active {
+    transform: scale(0.95);
+    color: #fff;
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    /* Clean base font */
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    /* Prevent graph spill */
 }
 
 /* Sections */
@@ -223,6 +322,13 @@ main {
     vertical-align: middle;
 }
 
+/* Resume & Action Buttons */
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    /* Ensure spacing between buttons */
+}
+
 /* Resume Button */
 .btn-resume {
     border: 1px solid var(--accent-primary);
@@ -237,11 +343,6 @@ main {
     background: var(--accent-primary);
     color: #0f172a !important;
     box-shadow: 0 0 15px var(--accent-glow);
-}
-
-.hero-actions {
-    display: flex;
-    gap: 1.5rem;
 }
 
 /* Tech Buttons */
@@ -620,4 +721,134 @@ main {
     font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.4;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+
+    /* 1. Typography fixes */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .typewriter-text {
+        font-size: 1.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+
+    /* 2. Navbar Redesign for Mobile (Hamburger) */
+    .nav-bar {
+        padding: 0 1rem;
+        height: 70px;
+        /* Force fix height */
+        backdrop-filter: blur(15px);
+    }
+
+    .nav-content {
+        flex-direction: row;
+        /* Keep row for Logo + Toggle */
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .nav-header {
+        width: 100%;
+        /* Occupy full top bar */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        /* Show Toggle Button */
+    }
+
+    .nav-links {
+        display: flex;
+        /* Always flex, hide via visibility/opacity */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: rgba(15, 23, 42, 0.98);
+        border-bottom: 1px solid var(--accent-glow);
+        padding: 2rem 0;
+        gap: 1.5rem;
+        align-items: center;
+        z-index: 999;
+
+        /* Animation Base State */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Smooth 'Cyber' ease */
+    }
+
+    /* Active State (When Toggled) */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        /* Larger touch targets */
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    main {
+        padding-top: 80px;
+        /* Don't need as much padding now */
+    }
+
+    /* 3. Button Wrapping */
+    .hero-actions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 4. Grid Fixes */
+    .projects-grid,
+    .skills-container,
+    .education-grid,
+    .cert-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* 5. Spacing adjustments */
+    .section-pad {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .contact-box {
+        padding: 1.5rem;
+    }
 }

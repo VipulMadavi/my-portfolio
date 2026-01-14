@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+#npm files
 node_modules
 dist
 dist-ssr
@@ -22,3 +23,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#md files
+dev_journey_diary.md
+V2_MIGRATION_GUIDE.md

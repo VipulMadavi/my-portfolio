@@ -10,7 +10,12 @@ export function mount(container) {
     <div class="gui-layout">
       <nav class="glass-panel nav-bar">
         <div class="container nav-content">
-          <span class="logo">VM.cloud</span>
+          <div class="nav-header">
+            <span class="logo">VM.cloud</span>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <span>[ :: SYSTEM :: ]</span>
+            </button>
+          </div>
           <div class="nav-links">
             <a href="#hero">Home</a>
             <a href="#skills">Skills</a>
@@ -44,6 +49,33 @@ export function mount(container) {
   renderProjects(container.querySelector('#projects'));
   renderContact(container.querySelector('#contact'));
   renderTicker(container.querySelector('#ticker-container'));
+
+  // Logic for Mobile Menu Toggle
+  const toggleBtn = container.querySelector('.menu-toggle');
+  const navLinks = container.querySelector('.nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    // Change button text based on state
+    const span = toggleBtn.querySelector('span');
+    if (navLinks.classList.contains('active')) {
+      span.textContent = '[ :: CLOSE :: ]';
+      span.style.color = 'var(--text-primary)';
+    } else {
+      span.textContent = '[ :: SYSTEM :: ]';
+      span.style.color = 'var(--accent-primary)';
+    }
+  });
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      const span = toggleBtn.querySelector('span');
+      span.textContent = '[ :: SYSTEM :: ]';
+      span.style.color = 'var(--accent-primary)';
+    });
+  });
 
   // Add scroll padding for fixed nav
   document.documentElement.style.scrollPaddingTop = '80px';
