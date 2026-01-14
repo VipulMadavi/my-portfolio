@@ -36,18 +36,18 @@ function r(e){e.innerHTML=`
         </div>
       </div>
     </div>
-  `,d()}function d(){const e=["AI, CyberSec & Cloud Tech.","an Enthusiastic Learner.","a CSE Student.","an SIH 2025 Finalist."],a=document.getElementById("typing-text");let s=0,i=0,t=!1;function n(){const l=e[s];t?(a.textContent=l.substring(0,i-1),i--):(a.textContent=l.substring(0,i+1),i++);let c=t?50:100;!t&&i===l.length?(c=2e3,t=!0):t&&i===0&&(t=!1,s=(s+1)%e.length,c=500),setTimeout(n,c)}n()}const v={"Cybersecurity & Networks":[{name:"Network Security",level:90},{name:"Cloud Security",level:85},{name:"SIEM",level:75},{name:"Internet Security",level:80}],"Programming & Tools":[{name:"Python",level:90},{name:"C++",level:75},{name:"SQL",level:80},{name:"Linux",level:85},{name:"Flutter",level:70},{name:"Machine Learning",level:65}],Interpersonal:[{name:"Communication",level:95},{name:"Collaboration (SIH)",level:90},{name:"Problem Solving",level:85}]};function p(e){const a=Object.entries(v).map(([s,i])=>`
+  `,d()}function d(){const e=["AI, CyberSec & Cloud Tech.","an Enthusiastic Learner.","a CSE Student.","an SIH 2025 Finalist."],a=document.getElementById("typing-text");let t=0,i=0,s=!1;function n(){const l=e[t];s?(a.textContent=l.substring(0,i-1),i--):(a.textContent=l.substring(0,i+1),i++);let c=s?50:100;!s&&i===l.length?(c=2e3,s=!0):s&&i===0&&(s=!1,t=(t+1)%e.length,c=500),setTimeout(n,c)}n()}const v={"Cybersecurity & Networks":[{name:"Network Security",level:90},{name:"Cloud Security",level:85},{name:"SIEM",level:75},{name:"Internet Security",level:80}],"Programming & Tools":[{name:"Python",level:90},{name:"C++",level:75},{name:"SQL",level:80},{name:"Linux",level:85},{name:"Flutter",level:70},{name:"Machine Learning",level:65}],Interpersonal:[{name:"Communication",level:95},{name:"Collaboration (SIH)",level:90},{name:"Problem Solving",level:85}]};function p(e){const a=Object.entries(v).map(([t,i])=>`
     <div class="skill-category">
-      <h3>${s}</h3>
+      <h3>${t}</h3>
       <div class="skills-list">
-        ${i.map(t=>`
+        ${i.map(s=>`
           <div class="skill-item">
             <div class="skill-info">
-              <span>${t.name}</span>
-              <span>${t.level}%</span>
+              <span>${s.name}</span>
+              <span>${s.level}%</span>
             </div>
             <div class="progress-bg">
-              <div class="progress-fill" style="width: 0%" data-target="${t.level}%"></div>
+              <div class="progress-fill" style="width: 0%" data-target="${s.level}%"></div>
             </div>
           </div>
         `).join("")}
@@ -60,7 +60,7 @@ function r(e){e.innerHTML=`
     <div class="skills-container">
       ${a}
     </div>
-  `,u()}function u(){const e=new IntersectionObserver(s=>{s.forEach(i=>{i.isIntersecting&&(i.target.querySelectorAll(".progress-fill").forEach(n=>{n.style.width=n.dataset.target}),e.unobserve(i.target))})},{threshold:.2}),a=document.querySelector(".skills-container");a&&e.observe(a)}function h(e){e.innerHTML=`
+  `,u()}function u(){const e=new IntersectionObserver(t=>{t.forEach(i=>{i.isIntersecting&&(i.target.querySelectorAll(".progress-fill").forEach(n=>{n.style.width=n.dataset.target}),e.unobserve(i.target))})},{threshold:.2}),a=document.querySelector(".skills-container");a&&e.observe(a)}function h(e){e.innerHTML=`
     <div class="section-container">
       
       <!-- Experience Section -->
@@ -128,13 +128,13 @@ function r(e){e.innerHTML=`
       </div>
 
     </div>
-  `}const m=[{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"]},{title:"Cloud Monitor",desc:"Automated AWS S3 & IAM posture monitoring system.",tags:["AWS","Boto3","Compliance"]},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"]},{title:"SOC Dashboard",desc:"ELK Stack dashboard for visualizing brute-force attacks.",tags:["ELK","Blue Team","Analytics"]}];function g(e){const a=m.map(s=>`
+  `}const g=[{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"]},{title:"Cloud Monitor",desc:"Automated AWS S3 & IAM posture monitoring system.",tags:["AWS","Boto3","Compliance"]},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"]},{title:"SOC Dashboard",desc:"ELK Stack dashboard for visualizing brute-force attacks.",tags:["ELK","Blue Team","Analytics"]}];function m(e){const a=g.map(t=>`
     <article class="glass-panel project-card">
       <div class="card-content">
-        <h3>${s.title}</h3>
-        <p>${s.desc}</p>
+        <h3>${t.title}</h3>
+        <p>${t.desc}</p>
         <div class="tags">
-          ${s.tags.map(i=>`<span class="tag">${i}</span>`).join("")}
+          ${t.tags.map(i=>`<span class="tag">${i}</span>`).join("")}
         </div>
       </div>
     </article>
@@ -158,11 +158,16 @@ function r(e){e.innerHTML=`
         <a href="https://github.com/VipulMadavi" target="_blank">GitHub</a>
       </div>
     </div>
-  `}function f(e){e.innerHTML=`
+  `}function y(e){e.innerHTML=`
     <div class="gui-layout">
       <nav class="glass-panel nav-bar">
         <div class="container nav-content">
-          <span class="logo">VM.cloud</span>
+          <div class="nav-header">
+            <span class="logo">VM.cloud</span>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+              <span>[ :: SYSTEM :: ]</span>
+            </button>
+          </div>
           <div class="nav-links">
             <a href="#hero">Home</a>
             <a href="#skills">Skills</a>
@@ -187,4 +192,4 @@ function r(e){e.innerHTML=`
         <p>© ${new Date().getFullYear()} Vipul Madavi. Secure by Design.</p>
       </footer>
     </div>
-  `,o(e.querySelector("#hero")),p(e.querySelector("#skills")),h(e.querySelector("#qualifications")),g(e.querySelector("#projects")),S(e.querySelector("#contact")),r(e.querySelector("#ticker-container")),document.documentElement.style.scrollPaddingTop="80px"}export{f as mount};
+  `,o(e.querySelector("#hero")),p(e.querySelector("#skills")),h(e.querySelector("#qualifications")),m(e.querySelector("#projects")),S(e.querySelector("#contact")),r(e.querySelector("#ticker-container"));const a=e.querySelector(".menu-toggle"),t=e.querySelector(".nav-links");a.addEventListener("click",()=>{t.classList.toggle("active");const i=a.querySelector("span");t.classList.contains("active")?(i.textContent="[ :: CLOSE :: ]",i.style.color="var(--text-primary)"):(i.textContent="[ :: SYSTEM :: ]",i.style.color="var(--accent-primary)")}),t.querySelectorAll("a").forEach(i=>{i.addEventListener("click",()=>{t.classList.remove("active");const s=a.querySelector("span");s.textContent="[ :: SYSTEM :: ]",s.style.color="var(--accent-primary)"})}),document.documentElement.style.scrollPaddingTop="80px"}export{y as mount};
