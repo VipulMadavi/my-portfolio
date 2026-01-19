@@ -14,11 +14,13 @@ const projects = [
     desc: "National finalist in Smart India Hackathon 2025.",
     tags: ["Achievement", "Innovation", "National Level"]
   },
+  /*
   {
     title: "SOC Dashboard",
     desc: "ELK Stack dashboard for visualizing brute-force attacks.",
     tags: ["ELK", "Blue Team", "Analytics"]
   }
+    */
 ];
 
 export function renderProjects(element) {
