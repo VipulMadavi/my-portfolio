@@ -60,7 +60,7 @@ function r(e){e.innerHTML=`
     <div class="skills-container">
       ${a}
     </div>
-  `,u()}function u(){const e=new IntersectionObserver(t=>{t.forEach(i=>{i.isIntersecting&&(i.target.querySelectorAll(".progress-fill").forEach(n=>{n.style.width=n.dataset.target}),e.unobserve(i.target))})},{threshold:.2}),a=document.querySelector(".skills-container");a&&e.observe(a)}function h(e){e.innerHTML=`
+  `,u()}function u(){const e=new IntersectionObserver(t=>{t.forEach(i=>{i.isIntersecting&&(i.target.querySelectorAll(".progress-fill").forEach(n=>{n.style.width=n.dataset.target}),e.unobserve(i.target))})},{threshold:.2}),a=document.querySelector(".skills-container");a&&e.observe(a)}function g(e){e.innerHTML=`
     <div class="section-container">
       
       <!-- Experience Section -->
@@ -128,7 +128,7 @@ function r(e){e.innerHTML=`
       </div>
 
     </div>
-  `}const m=[{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"]},{title:"Cloud Monitor",desc:"Automated AWS S3 & IAM posture monitoring system.",tags:["AWS","Boto3","Compliance"]},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"]}];function g(e){const a=m.map(t=>`
+  `}const h=[{title:"Library Analytics DAVIS",desc:"College library analytics system using Python and Flask to simulate book issuing and generate KPIs, charts, and insights.",tags:["Python","Flask","Analytics"]},{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"]},{title:"Network Intrusion Detection",desc:"Python-based system using MySQL to monitor network logs and identify potential security threats.",tags:["Security","Python","MySQL"]},{title:"Solar-Scheduler",desc:"An intelligent scheduling system focused on optimizing solar energy consumption architecture.",tags:["JavaScript","Cloud Security","Vite"]},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"]}];function S(e){const a=h.map(t=>`
     <article class="glass-panel project-card">
       <div class="card-content">
         <h3>${t.title}</h3>
@@ -145,7 +145,7 @@ function r(e){e.innerHTML=`
     <div class="projects-grid">
       ${a}
     </div>
-  `}function S(e){e.innerHTML=`
+  `}function m(e){e.innerHTML=`
     <div class="glass-panel contact-box">
       <h2>Initialize Connection</h2>
       <p>
@@ -192,4 +192,4 @@ function r(e){e.innerHTML=`
         <p>© ${new Date().getFullYear()} Vipul Madavi. Secure by Design.</p>
       </footer>
     </div>
-  `,o(e.querySelector("#hero")),p(e.querySelector("#skills")),h(e.querySelector("#qualifications")),g(e.querySelector("#projects")),S(e.querySelector("#contact")),r(e.querySelector("#ticker-container"));const a=e.querySelector(".menu-toggle"),t=e.querySelector(".nav-links");a.addEventListener("click",()=>{t.classList.toggle("active");const i=a.querySelector("span");t.classList.contains("active")?(i.textContent="[ :: CLOSE :: ]",i.style.color="var(--text-primary)"):(i.textContent="[ :: SYSTEM :: ]",i.style.color="var(--accent-primary)")}),t.querySelectorAll("a").forEach(i=>{i.addEventListener("click",()=>{t.classList.remove("active");const s=a.querySelector("span");s.textContent="[ :: SYSTEM :: ]",s.style.color="var(--accent-primary)"})}),document.documentElement.style.scrollPaddingTop="80px"}export{y as mount};
+  `,o(e.querySelector("#hero")),p(e.querySelector("#skills")),g(e.querySelector("#qualifications")),S(e.querySelector("#projects")),m(e.querySelector("#contact")),r(e.querySelector("#ticker-container"));const a=e.querySelector(".menu-toggle"),t=e.querySelector(".nav-links");a.addEventListener("click",()=>{t.classList.toggle("active");const i=a.querySelector("span");t.classList.contains("active")?(i.textContent="[ :: CLOSE :: ]",i.style.color="var(--text-primary)"):(i.textContent="[ :: SYSTEM :: ]",i.style.color="var(--accent-primary)")}),t.querySelectorAll("a").forEach(i=>{i.addEventListener("click",()=>{t.classList.remove("active");const s=a.querySelector("span");s.textContent="[ :: SYSTEM :: ]",s.style.color="var(--accent-primary)"})}),document.documentElement.style.scrollPaddingTop="80px"}export{y as mount};
