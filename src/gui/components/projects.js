@@ -1,13 +1,23 @@
 const projects = [
   {
+    title: "Library Analytics DAVIS",
+    desc: "College library analytics system using Python and Flask to simulate book issuing and generate KPIs, charts, and insights.",
+    tags: ["Python", "Flask", "Analytics"]
+  },
+  {
     title: "AEStego",
     desc: "Combines AES-128 encryption with image steganography to securely embed and extract data.",
     tags: ["Python", "Cryptography", "Security"]
   },
   {
-    title: "Cloud Monitor",
-    desc: "Automated AWS S3 & IAM posture monitoring system.",
-    tags: ["AWS", "Boto3", "Compliance"]
+    title: "Network Intrusion Detection",
+    desc: "Python-based system using MySQL to monitor network logs and identify potential security threats.",
+    tags: ["Security", "Python", "MySQL"]
+  },
+  {
+    title: "Solar-Scheduler",
+    desc: "An intelligent scheduling system focused on optimizing solar energy consumption architecture.",
+    tags: ["JavaScript", "Cloud Security", "Vite"]
   },
   {
     title: "SIH 2025 Finalist",

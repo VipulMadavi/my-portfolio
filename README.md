@@ -1,68 +1,101 @@
-# 🌐 Vipul Madavi — Portfolio
+# 🌐 Vipul Madavi — Cyber-Cloud Portfolio
 
-Welcome to my personal portfolio website!
 
-This website showcases my professional journey, technical skills, certifications, and projects in the field of **Cloud Security**, **DevSecOps**, **Network Engineering**, and **Python Automation**. It features a unique dual-mode interface: a public graphical view and a hidden developer terminal.
+<div align="center">
 
-> 🔒 Cloud Security Enthusiast | Third Year CS Student
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Cloud Security](https://img.shields.io/badge/Focus-Cloud%20Security-blueviolet?style=for-the-badge)](https://github.com/VipulMadavi)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
+**"Where Cloud Infrastructure meets Terminal Precision."**
 
-## 🚀 Live Website
+[Live Website](https://vipulmadavi.github.io/vipulm1509.github.io) • [Report Bug](https://github.com/VipulMadavi/my-portfolio/issues)
 
-Visit the portfolio: [https://vipulmadavi.github.io/vipulm1509.github.io](https://vipulmadavi.github.io/vipulm1509.github.io)
+### 📲 Connect With Me
 
----
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/vipul-madavi1509)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/VipulMadavi)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:vipulmadavi1509@gmail.com)
 
-## 🛠️ Built With
-
-- **HTML5** (Semantic Structure)
-- **CSS3** (Custom "Cyber-Cloud" Theme & Animations)
-- **Vanilla JavaScript** (Logic for dual-modes)
-- **Vite** (Build Tool)
-- **Canvas API** (Interactive Network Background)
-- **Responsive Design** for all devices
+</div>
 
 ---
 
-## 📂 Structure
+## ✨ Unique Features
+
+- **🎭 Dual-Mode Interface**: Switch between a sleek "Cloud Horizon" GUI and a "Cloud Shell" Developer Terminal.
+- **🛰️ Interactive Network Background**: Powered by Canvas API for a dynamic, neural-link aesthetic.
+- **⚡ Ultra-Lightweight**: Built with Vanilla JS & Vite for sub-second load times.
+- **📟 Hidden Terminal**: A professional CLI environment for power users.
+
+---
+
+## 📟 Accessing the Hidden Terminal Mode
+
+The portfolio features a hidden "Developer Shell" mode. You can access it in following way:
+
+  **URL Entry**: Append `?dev=true` or `?mode=shell` to the website URL.
+    *   Example: `https://vipulmadavi.github.io/vipulm1509.github.io/?dev=true`
+
+### ⌨️ Terminal Commands
+Once inside the shell, try these commands:
+- `about` — View professional summary.
+- `skills` — Display technical proficiency.
+- `projects` — List of security & dev projects.
+- `gui` — Switch back to Graphical Mode.
+- `clear` — Wipe the terminal screen.
+- `help` — Show all available commands.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, CSS3 (Custom "Cyber-Cloud" Theme), Vanilla JavaScript
+- **Tooling**: Vite, TypeScript, GitHub Pages
+- **Visuals**: Canvas API, Glitch & Typewriter Animations
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/VipulMadavi/my-portfolio.git
+   ```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Start the dev server**
+   ```bash
+   npm run dev
+   ```
+
+## 📂 Project Structure
 
 ```
 📁 root
     ├── index.html          # Entry point
     ├── src/
-    │   ├── gui.css         # "Cloud Horizon" Theme Styles
-    │   ├── main.js         # Mode Manager
     │   ├── gui/            # Graphical Interface Components
-    │   └── terminal/       # Hidden Command Line Interface
-    └── README.md           # You are here
+    │   ├── terminal/       # Developer Shell Logic
+    │   ├── main.js         # Mode Selection Manager
+    │   └── gui.css         # "Cloud Horizon" Theme Styles
+    └── README.md           # Core Documentation
 ```
 
----
+## 🗺️ V2 Roadmap
+- [ ] **BIOS Boot Screen**: Interactive "Select OS" startup sequence.
+- [ ] **Blog Integration**: Dynamic fetching of security writeups.
+- [ ] **Mobile CLI**: Optimized touch-terminal experience.
 
-## 🧠 Sections Included
+## 💡 A Note on Build Process
 
-- 👨‍💻 **Hero Section**: Introduces my role with dynamic typing effects.
-- ⚙️ **Skills**: Visual progress bars for Cloud, Network, and Security skills.
-- 📁 **Projects**: Showcase of work like **AEStego** and **SOC Dashboard**.
-- 📟 **Hidden Terminal**: A "Cloud Shell" backdrop accessible via `?dev=true` or the *Hack* command.
-- 📜 **Resume**: Direct access to my professional resume.
-- 📞 **Contact**: Integrated connection details.
+While I used AI to speed up some of the repetitive coding and UI polishing, the core architecture, the dual-mode logic, and the overall design were entirely planned and built by me. I see AI as a great tool to boost productivity, but the creative direction and code auditing are all human-led.
 
 ---
 
-## 🖥️ Hosting via GitHub Pages
-
-This site is designed to be deployed using [GitHub Pages](https://pages.github.com/), providing a fast and secure way to host the static portfolio directly from the repository.
-
----
-
-## 📧 Connect With Me
-
-- 💼 [LinkedIn](https://linkedin.com/in/vipul-madavi1509)
-- 🐙 [GitHub](https://github.com/VipulMadavi)
-- 📧 [Email](mailto:vipulmadavi1509@gmail.com)
-
----
-
-> Designed & Developed with 💙 by **Vipul Madavi**
+<div align="center">
+  Designed & Developed with 💙 by <b>Vipul Madavi</b>
+</div>
