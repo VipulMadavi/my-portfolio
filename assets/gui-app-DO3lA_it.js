@@ -1,4 +1,4 @@
-function c(e){e.innerHTML=`
+function d(e){e.innerHTML=`
     <div class="ticker-wrap">
       <div class="ticker">
         <div class="ticker-item">[INFO] SYSTEM INITIALIZED</div>
@@ -15,7 +15,7 @@ function c(e){e.innerHTML=`
         <div class="ticker-item">>> EXEC: VIPUL_MADAVI_RESUME.PDF</div>
       </div>
     </div>
-  `}function o(e){e.innerHTML=`
+  `}function v(e){e.innerHTML=`
     <div class="container hero-container">
       <div class="hero-content">
         <span class="mono-subtitle">> SYSTEM STATUS: SEEKING OPPORTUNITIES...</span>
@@ -36,18 +36,18 @@ function c(e){e.innerHTML=`
         </div>
       </div>
     </div>
-  `,d()}function d(){const e=["AI, CyberSec & Cloud Tech.","an Enthusiastic Learner.","a CSE Student.","an SIH 2025 Finalist."],n=document.getElementById("typing-text");let i=0,t=0,s=!1;function a(){const l=e[i];s?(n.textContent=l.substring(0,t-1),t--):(n.textContent=l.substring(0,t+1),t++);let r=s?50:100;!s&&t===l.length?(r=2e3,s=!0):s&&t===0&&(s=!1,i=(i+1)%e.length,r=500),setTimeout(a,r)}a()}const v={"Cybersecurity & Networks":[{name:"Network Security",level:90},{name:"Cloud Security",level:85},{name:"SIEM",level:75},{name:"Internet Security",level:80}],"Programming & Tools":[{name:"Python",level:90},{name:"C++",level:75},{name:"SQL",level:80},{name:"Linux",level:85},{name:"Flutter",level:70},{name:"Machine Learning",level:65}],Interpersonal:[{name:"Communication",level:95},{name:"Collaboration (SIH)",level:90},{name:"Problem Solving",level:85}]};function p(e){const n=Object.entries(v).map(([i,t])=>`
+  `,u()}function u(){const e=["AI, CyberSec & Cloud Tech.","an Enthusiastic Learner.","a CSE Student.","an SIH 2025 Finalist."],n=document.getElementById("typing-text");let t=0,i=0,a=!1;function l(){const s=e[t];a?(n.textContent=s.substring(0,i-1),i--):(n.textContent=s.substring(0,i+1),i++);let r=a?50:100;!a&&i===s.length?(r=2e3,a=!0):a&&i===0&&(a=!1,t=(t+1)%e.length,r=500),setTimeout(l,r)}l()}const p={"Cybersecurity & Networks":[{name:"Network Security",level:90},{name:"Cloud Security",level:85},{name:"SIEM",level:75},{name:"Internet Security",level:80}],"Programming & Tools":[{name:"Python",level:90},{name:"C++",level:75},{name:"SQL",level:80},{name:"Linux",level:85},{name:"Flutter",level:70},{name:"Machine Learning",level:65}],Interpersonal:[{name:"Communication",level:95},{name:"Collaboration (SIH)",level:90},{name:"Problem Solving",level:85}]};function h(e){const n=Object.entries(p).map(([t,i])=>`
     <div class="skill-category">
-      <h3>${i}</h3>
+      <h3>${t}</h3>
       <div class="skills-list">
-        ${t.map(s=>`
+        ${i.map(a=>`
           <div class="skill-item">
             <div class="skill-info">
-              <span>${s.name}</span>
-              <span>${s.level}%</span>
+              <span>${a.name}</span>
+              <span>${a.level}%</span>
             </div>
             <div class="progress-bg">
-              <div class="progress-fill" style="width: 0%" data-target="${s.level}%"></div>
+              <div class="progress-fill" style="width: 0%" data-target="${a.level}%"></div>
             </div>
           </div>
         `).join("")}
@@ -60,7 +60,7 @@ function c(e){e.innerHTML=`
     <div class="skills-container">
       ${n}
     </div>
-  `,u()}function u(){const e=new IntersectionObserver(i=>{i.forEach(t=>{t.isIntersecting&&(t.target.querySelectorAll(".progress-fill").forEach(a=>{a.style.width=a.dataset.target}),e.unobserve(t.target))})},{threshold:.2}),n=document.querySelector(".skills-container");n&&e.observe(n)}function h(e){e.innerHTML=`
+  `,g()}function g(){const e=new IntersectionObserver(t=>{t.forEach(i=>{i.isIntersecting&&(i.target.querySelectorAll(".progress-fill").forEach(l=>{l.style.width=l.dataset.target}),e.unobserve(i.target))})},{threshold:.2}),n=document.querySelector(".skills-container");n&&e.observe(n)}function S(e){e.innerHTML=`
     <div class="section-container">
       
       <!-- Experience Section -->
@@ -128,14 +128,18 @@ function c(e){e.innerHTML=`
       </div>
 
     </div>
-  `}const g=[{title:"Library Analytics DAVIS",desc:"College library analytics system using Python and Flask to simulate book issuing and generate KPIs, charts, and insights.",tags:["Python","Flask","Analytics"]},{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"]},{title:"Network Intrusion Detection",desc:"Python-based system using MySQL to monitor network logs and identify potential security threats.",tags:["Security","Python","MySQL"]},{title:"Solar-Scheduler",desc:"An intelligent scheduling system focused on optimizing solar energy consumption architecture.",tags:["JavaScript","Cloud Security","Vite"]},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"]}];function m(e){const n=g.map(i=>`
+  `}const m=[{title:"Library Analytics DAVIS",desc:"College library analytics system using Python and Flask to simulate book issuing and generate KPIs, charts, and insights.",tags:["Python","Flask","Analytics"],github:null},{title:"AEStego",desc:"Combines AES-128 encryption with image steganography to securely embed and extract data.",tags:["Python","Cryptography","Security"],github:"https://github.com/VipulMadavi/AEStego"},{title:"Network Intrusion Detection",desc:"Python-based system using MySQL to monitor network logs and identify potential security threats.",tags:["Security","Python","MySQL"],github:"https://github.com/VipulMadavi/Network-Intrusion-Detection-System-using-Python-MySQL"},{title:"Solar-Scheduler",desc:"An intelligent scheduling system focused on optimizing solar energy consumption architecture.",tags:["JavaScript","Cloud Security","Vite"],github:null},{title:"SIH 2025 Finalist",desc:"National finalist in Smart India Hackathon 2025.",tags:["Achievement","Innovation","National Level"],github:null}];function y(e){const n=m.map(t=>`
     <article class="glass-panel project-card">
       <div class="card-content">
-        <h3>${i.title}</h3>
-        <p>${i.desc}</p>
+        <h3>${t.title}</h3>
+        <p>${t.desc}</p>
         <div class="tags">
-          ${i.tags.map(t=>`<span class="tag">${t}</span>`).join("")}
+          ${t.tags.map(i=>`<span class="tag">${i}</span>`).join("")}
         </div>
+        ${t.github?`<a href="${t.github}" target="_blank" rel="noopener noreferrer" class="project-github-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>Source</span>
+        </a>`:""}
       </div>
     </article>
   `).join("");e.innerHTML=`
@@ -145,7 +149,7 @@ function c(e){e.innerHTML=`
     <div class="projects-grid">
       ${n}
     </div>
-  `}function S(e){e.innerHTML=`
+  `}function f(e){e.innerHTML=`
     <div class="glass-panel contact-box">
       <h2>Initialize Connection</h2>
       <p>
@@ -158,8 +162,9 @@ function c(e){e.innerHTML=`
         <a href="https://github.com/VipulMadavi" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
-  `}function y(e){e.innerHTML=`
+  `}function b(e){e.innerHTML=`
     <div class="gui-layout">
+      <a href="#hero" class="skip-to-content">Skip to content</a>
       <nav class="glass-panel nav-bar" aria-label="Main navigation">
         <div class="container nav-content">
           <div class="nav-header">
@@ -193,4 +198,4 @@ function c(e){e.innerHTML=`
         <p>© ${new Date().getFullYear()} Vipul Madavi. Secure by Design.</p>
       </footer>
     </div>
-  `,o(e.querySelector("#hero")),p(e.querySelector("#skills")),h(e.querySelector("#qualifications")),m(e.querySelector("#projects")),S(e.querySelector("#contact")),c(e.querySelector("#ticker-container"));const n=e.querySelector(".menu-toggle"),i=e.querySelector(".nav-links");n.addEventListener("click",()=>{i.classList.toggle("active");const t=n.querySelector("span");i.classList.contains("active")?(t.textContent="[ :: CLOSE :: ]",t.style.color="var(--text-primary)"):(t.textContent="[ :: SYSTEM :: ]",t.style.color="var(--accent-primary)")}),i.querySelectorAll("a").forEach(t=>{t.addEventListener("click",()=>{i.classList.remove("active");const s=n.querySelector("span");s.textContent="[ :: SYSTEM :: ]",s.style.color="var(--accent-primary)"})}),document.documentElement.style.scrollPaddingTop="80px"}export{y as mount};
+  `,v(e.querySelector("#hero")),h(e.querySelector("#skills")),S(e.querySelector("#qualifications")),y(e.querySelector("#projects")),f(e.querySelector("#contact")),d(e.querySelector("#ticker-container"));const n=e.querySelector(".menu-toggle"),t=e.querySelector(".nav-links");n.addEventListener("click",()=>{t.classList.toggle("active");const s=n.querySelector("span");t.classList.contains("active")?(s.textContent="[ :: CLOSE :: ]",s.style.color="var(--text-primary)"):(s.textContent="[ :: SYSTEM :: ]",s.style.color="var(--accent-primary)")}),t.querySelectorAll("a").forEach(s=>{s.addEventListener("click",()=>{t.classList.remove("active");const r=n.querySelector("span");r.textContent="[ :: SYSTEM :: ]",r.style.color="var(--accent-primary)"})}),document.documentElement.style.scrollPaddingTop="80px";const i=e.querySelectorAll("main section[id]"),a=e.querySelectorAll('.nav-links a[href^="#"]'),l=new IntersectionObserver(s=>{s.forEach(r=>{if(r.isIntersecting){a.forEach(c=>c.removeAttribute("aria-current"));const o=e.querySelector(`.nav-links a[href="#${r.target.id}"]`);o&&o.setAttribute("aria-current","page")}})},{rootMargin:"-20% 0px -60% 0px",threshold:0});i.forEach(s=>l.observe(s))}export{b as mount};
