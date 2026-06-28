@@ -8,6 +8,7 @@ import { renderContact } from './components/contact.js';
 export function mount(container) {
   container.innerHTML = `
     <div class="gui-layout">
+      <a href="#hero" class="skip-to-content">Skip to content</a>
       <nav class="glass-panel nav-bar" aria-label="Main navigation">
         <div class="container nav-content">
           <div class="nav-header">
@@ -80,4 +81,20 @@ export function mount(container) {
 
   // Add scroll padding for fixed nav
   document.documentElement.style.scrollPaddingTop = '80px';
+
+  // IntersectionObserver for aria-current on nav links
+  const sections = container.querySelectorAll('main section[id]');
+  const navAnchors = container.querySelectorAll('.nav-links a[href^="#"]');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navAnchors.forEach(a => a.removeAttribute('aria-current'));
+        const active = container.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.setAttribute('aria-current', 'page');
+      }
+    });
+  }, { rootMargin: '-20% 0px -60% 0px', threshold: 0 });
+
+  sections.forEach(section => observer.observe(section));
 }

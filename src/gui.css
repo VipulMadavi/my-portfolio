@@ -249,66 +249,66 @@ main {
 .glitch::before {
     left: 2px;
     text-shadow: -1px 0 #ff00c1;
-    clip: rect(44px, 450px, 56px, 0);
+    clip-path: inset(40% 0 20% 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
 .glitch::after {
     left: -2px;
     text-shadow: -1px 0 #00fff9;
-    clip: rect(44px, 450px, 56px, 0);
+    clip-path: inset(60% 0 5% 0);
     animation: glitch-anim2 5s infinite linear alternate-reverse;
 }
 
 @keyframes glitch-anim {
     0% {
-        clip: rect(30px, 9999px, 10px, 0);
+        clip-path: inset(30% 0 60% 0);
     }
 
     5% {
-        clip: rect(80px, 9999px, 90px, 0);
+        clip-path: inset(70% 0 10% 0);
     }
 
     10% {
-        clip: rect(10px, 9999px, 85px, 0);
+        clip-path: inset(10% 0 15% 0);
     }
 
     15% {
-        clip: rect(40px, 9999px, 45px, 0);
+        clip-path: inset(40% 0 50% 0);
     }
 
     20% {
-        clip: rect(10, 9999px, 100px, 0);
+        clip-path: inset(5% 0 0% 0);
     }
 
     100% {
-        clip: rect(0, 9999px, 0, 0);
+        clip-path: inset(0 0 100% 0);
     }
 }
 
 @keyframes glitch-anim2 {
     0% {
-        clip: rect(10px, 9999px, 80px, 0);
+        clip-path: inset(10% 0 20% 0);
     }
 
     5% {
-        clip: rect(30px, 9999px, 10px, 0);
+        clip-path: inset(30% 0 60% 0);
     }
 
     10% {
-        clip: rect(50px, 9999px, 20px, 0);
+        clip-path: inset(50% 0 30% 0);
     }
 
     15% {
-        clip: rect(80px, 9999px, 60px, 0);
+        clip-path: inset(70% 0 10% 0);
     }
 
     20% {
-        clip: rect(5, 9999px, 30px, 0);
+        clip-path: inset(5% 0 65% 0);
     }
 
     100% {
-        clip: rect(0, 9999px, 0, 0);
+        clip-path: inset(0 0 100% 0);
     }
 }
 
@@ -412,7 +412,6 @@ a:focus-visible,
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
 }
 
 .project-card::before {
@@ -916,5 +915,84 @@ a:focus-visible,
 
     .contact-box {
         padding: 1.5rem;
+    }
+}
+
+/* Skip to Content Link */
+.skip-to-content {
+    position: absolute;
+    top: -100%;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.75rem 1.5rem;
+    background: var(--accent-primary);
+    color: var(--bg-color);
+    font-family: var(--font-mono);
+    font-weight: 700;
+    border-radius: 0 0 4px 4px;
+    transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+    top: 0;
+}
+
+/* Active Nav Link (aria-current) */
+.nav-links a[aria-current="page"] {
+    color: var(--accent-primary);
+    text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.nav-links a[aria-current="page"]::before,
+.nav-links a[aria-current="page"]::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Project Card GitHub Link */
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.project-github-link:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+    background: rgba(56, 189, 248, 0.05);
+}
+
+/* Touch Targets — ensure 44px min on all interactive elements */
+@media (max-width: 768px) {
+    .btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-links-row a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 }
