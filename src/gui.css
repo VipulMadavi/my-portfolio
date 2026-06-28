@@ -58,7 +58,7 @@
 
 .logo:hover {
     transform: scale(1.05);
-    text-shadow: 2px 0 var(--color-red), -2px 0 var(--color-yellow);
+    text-shadow: 2px 0 #ff00c1, -2px 0 #00fff9;
 }
 
 /* Menu Toggle Button (Desktop: Hidden) */
@@ -146,12 +146,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
-    /* Clean base font */
+    font-family: var(--font-sans);
     background-color: var(--bg-color);
     color: var(--text-primary);
     overflow-x: hidden;
-    /* Prevent graph spill */
 }
 
 /* Sections */
@@ -168,7 +166,7 @@ main {
 }
 
 .section-header h2 {
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     color: var(--accent-primary);
     font-size: 1.5rem;
     margin-bottom: 3rem;
@@ -205,9 +203,10 @@ main {
 }
 
 .hero-title {
+    font-family: var(--font-display);
     font-size: 4.5rem;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 2rem;
     letter-spacing: -2px;
 }
@@ -322,6 +321,11 @@ main {
     vertical-align: middle;
 }
 
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 /* Resume & Action Buttons */
 .hero-actions {
     display: flex;
@@ -384,6 +388,16 @@ main {
     border-color: var(--text-secondary);
 }
 
+/* Focus States - Accessibility */
+a:focus-visible,
+.btn:focus-visible,
+.menu-toggle:focus-visible,
+.project-card:focus-visible,
+.cert-card:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 3px;
+}
+
 /* Project Cards - Tech Style */
 .projects-grid {
     display: grid;
@@ -398,6 +412,7 @@ main {
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .project-card::before {
@@ -423,8 +438,33 @@ main {
     transform: scaleX(1);
 }
 
-.card-content h3 {
+.card-content p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
     font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 2px;
+    color: var(--accent-primary);
+    background: rgba(56, 189, 248, 0.05);
+    letter-spacing: 0.5px;
+}
+
+.card-content h3 {
+    font-family: var(--font-display);
     color: var(--text-primary);
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
@@ -438,7 +478,7 @@ main {
 }
 
 .skill-category h3 {
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     color: var(--text-primary);
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #334155;
@@ -506,7 +546,7 @@ main {
 
 .contact-box h2 {
     margin-bottom: 1rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-display);
     color: var(--accent-primary);
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -539,7 +579,7 @@ main {
     background-color: rgba(15, 23, 42, 0.98);
     /* Match theme dark blue */
     border-top: 1px solid var(--accent-glow);
-    z-index: 9999;
+    z-index: 50;
     display: flex;
     align-items: center;
 }
@@ -626,6 +666,7 @@ main {
 }
 
 .timeline-content h3 {
+    font-family: var(--font-display);
     margin-bottom: 0.2rem;
     font-size: 1.2rem;
 }
@@ -686,6 +727,7 @@ main {
     padding: 1.5rem;
     border: 1px solid rgba(56, 189, 248, 0.1);
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .cert-card:hover {
@@ -694,7 +736,10 @@ main {
 }
 
 .cert-icon {
-    font-size: 2rem;
+    color: var(--accent-primary);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
 }
 
 .cert-info h3 {
@@ -721,6 +766,27 @@ main {
     font-size: 0.85rem;
     color: var(--text-secondary);
     line-height: 1.4;
+}
+
+/* Reduced Motion - Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .glitch::before,
+    .glitch::after {
+        animation: none;
+    }
+    .ticker {
+        animation: none;
+    }
+    .cursor {
+        animation: none;
+    }
+    .progress-fill {
+        transition: none;
+    }
+    .project-card,
+    .cert-card {
+        transition: none;
+    }
 }
 
 /* --- Mobile Responsiveness --- */

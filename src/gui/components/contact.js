@@ -8,8 +8,8 @@ export function renderContact(element) {
       </p>
       <a href="mailto:vipulmadavi1509@gmail.com" class="btn btn-primary">Send Signal</a>
       <div class="social-links-row">
-        <a href="https://linkedin.com/in/vipul-madavi1509" target="_blank">LinkedIn</a>
-        <a href="https://github.com/VipulMadavi" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/vipul-madavi1509" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/VipulMadavi" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   `;
