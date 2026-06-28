@@ -4,13 +4,13 @@
 <div align="center">
 
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Cloud Security](https://img.shields.io/badge/Focus-Cloud%20Security-blueviolet?style=for-the-badge)](https://github.com/VipulMadavi)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 **"Where Cloud Infrastructure meets Terminal Precision."**
 
-[Live Website](https://vipulmadavi.github.io/vipulm1509.github.io) • [Report Bug](https://github.com/VipulMadavi/my-portfolio/issues)
+[Live Website](https://vipulmadavi.github.io/my-portfolio/) • [Report Bug](https://github.com/VipulMadavi/my-portfolio/issues)
 
 ### 📲 Connect With Me
 
@@ -33,10 +33,10 @@
 
 ## 📟 Accessing the Hidden Terminal Mode
 
-The portfolio features a hidden "Developer Shell" mode. You can access it in following way:
+The portfolio features a hidden "Developer Shell" mode. You can access it in the following way:
 
   **URL Entry**: Append `?dev=true` or `?mode=shell` to the website URL.
-    *   Example: `https://vipulmadavi.github.io/vipulm1509.github.io/?dev=true`
+    *   Example: `https://vipulmadavi.github.io/my-portfolio/?dev=true`
 
 ### ⌨️ Terminal Commands
 Once inside the shell, try these commands:
@@ -52,7 +52,7 @@ Once inside the shell, try these commands:
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML5, CSS3 (Custom "Cyber-Cloud" Theme), Vanilla JavaScript
-- **Tooling**: Vite, TypeScript, GitHub Pages
+- **Tooling**: Vite, GitHub Pages
 - **Visuals**: Canvas API, Glitch & Typewriter Animations
 
 ## 🚀 Getting Started
@@ -78,10 +78,14 @@ To run this project locally:
 📁 root
     ├── index.html          # Entry point
     ├── src/
+    │   ├── effects/        # Canvas network-graph animation
     │   ├── gui/            # Graphical Interface Components
     │   ├── terminal/       # Developer Shell Logic
     │   ├── main.js         # Mode Selection Manager
+    │   ├── loader.js       # Loading screen logic
+    │   ├── style.css       # Base styles
     │   └── gui.css         # "Cloud Horizon" Theme Styles
+    ├── docs/               # Roadmap, journals, audits
     └── README.md           # Core Documentation
 ```
 

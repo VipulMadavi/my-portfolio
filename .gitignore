@@ -24,16 +24,5 @@ dist-ssr
 *.sln
 *.sw?
 
-#md files
-dev_journey_diary.md
-V2_MIGRATION_GUIDE.md
-FUTURE_PLANS.md
-v2_roadmap.md
-mobile_audit.md
-FUTURE_ROADMAP.md
-dev_journey_diary_1.md
-
-vscode_docs
-antigravity_docs
-
-docs
+# Personal docs (journals, audits)
+docs/
