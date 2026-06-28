@@ -34,7 +34,7 @@ export function mount(container) {
         </div>
         <div class="input-line">
           <span class="prompt">➜  ~</span>
-          <input type="text" id="term-input" autocomplete="off" autofocus />
+          <input type="text" id="term-input" autocomplete="off" autofocus aria-label="Terminal input" />
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@ function processCommand(cmd, container) {
       break;
 
     case 'gui':
-      window.location.href = '/';
+      window.location.href = './';
       break;
 
     case '':

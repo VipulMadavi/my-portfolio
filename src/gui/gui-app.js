@@ -8,7 +8,7 @@ import { renderContact } from './components/contact.js';
 export function mount(container) {
   container.innerHTML = `
     <div class="gui-layout">
-      <nav class="glass-panel nav-bar">
+      <nav class="glass-panel nav-bar" aria-label="Main navigation">
         <div class="container nav-content">
           <div class="nav-header">
             <span class="logo">VM.cloud</span>
@@ -21,6 +21,7 @@ export function mount(container) {
             <a href="#skills">Skills</a>
             <a href="#qualifications">Profile</a>
             <a href="#projects">Projects</a>
+            <a href="https://vipulnotes.hashnode.dev/" target="_blank" rel="noopener noreferrer">Blog ↗</a>
             <a href="#contact">Contact</a>
           </div>
         </div>

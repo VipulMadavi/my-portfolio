@@ -16,7 +16,7 @@ export function renderHero(element) {
         </p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="/resume.pdf" target="_blank" class="btn btn-resume">Resume_v1.0</a>
+          <a href="./resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-resume">Resume_v1.0</a>
         </div>
       </div>
     </div>
